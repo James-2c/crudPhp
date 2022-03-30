@@ -34,6 +34,9 @@ if(isset($_POST['update'])){
     <title>Profile</title>
 </head>
 <body>
+    <a href="index.php" class="btn">Back</a>
+    <br>
+    <div style="margin-bottom: 50px;"></div>
     <form action="" method="post">
         <label>Student Id</label>
         <input type="text" name="id" value="<?php echo $row['Student_id']; ?>" readonly>
