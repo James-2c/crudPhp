@@ -51,10 +51,10 @@ if(isset($_POST['update'])){
         <input type="text" name="lname" value="<?php echo $row['Student_lname']; ?>">
         <br>
         <label>Sex</label>
-        <input type="text" name="sex" value="<?php echo $row['Student_sex']; ?>">
+        <input type="text" value="<?php echo $row['Student_sex']; ?>" readonly>
         <select name="sex">
-            <option value="Male" <?php if($row['Student_sex'] == "Male") echo 'selected="selected"' ?>></option>
-            <option value="Female" <?php if($row['Student_sex'] == "Female") echo 'selected="selected"' ?>></option>
+            <option value="Male" <?php if($row['Student_sex'] == "Male") echo 'selected="selected"' ?>>Male</option>
+            <option value="Female" <?php if($row['Student_sex'] == "Female") echo 'selected="selected"' ?>>Female</option>
         </select>
         <br>
         <input type="submit" name="update" value="Update">
