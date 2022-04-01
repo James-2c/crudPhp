@@ -4,6 +4,14 @@ include_once('connection/connection.php');
 
 $con = connection();
 
+if(!isset($_SESSION)){
+    session_start();
+}
+
+if(!isset($_SESSION['Username'])){
+    echo header("Location: login.php");
+}
+
 $sql = "SELECT * FROM STUDENT";
 $result = $con->query($sql) or die ($con->error);
 $row = $result->fetch_assoc();
@@ -18,12 +26,30 @@ $row = $result->fetch_assoc();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>    
     <title>main</title>
 </head>
 <body>
-    <a href="add.php" class="btn">Add</a>
+    <div class="navbar">
+        <div class="brand-title">
+            <h2>CRUD</h2>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-link">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Records</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <a href="#" class="btn-logout">Log-out</a>
     <br>
-    <div style="margin-bottom: 50px;"></div>
+    <a href="add.php" class="btn">Add</a>   
     <table>
         <thead>
             <tr>
