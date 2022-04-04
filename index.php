@@ -47,7 +47,7 @@ $row = $result->fetch_assoc();
             </ul>
         </div>
     </div>
-    <a href="#" class="btn-logout">Log-out</a>
+    <a href="logout.php" class="btn-logout">Log-out</a>
     <br>
     <a href="add.php" class="btn">Add</a>   
     <table>
