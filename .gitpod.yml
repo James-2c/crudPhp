@@ -1,5 +1,11 @@
+tasks:
+  - name: try
+    command: gp preview $(gp url 3306)index.php
 image:
   file: .gitpod.Dockerfile
 ports:
-  - port: 3306
+  - port: 3301
     onOpen: open-browser
+vscode:
+  extensions:
+    - vscode.php-language-features
