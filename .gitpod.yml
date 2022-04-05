@@ -1,6 +1,3 @@
-tasks:
-  - name: try
-    command: gp open index.php
 image:
   file: .gitpod.Dockerfile
 ports:
