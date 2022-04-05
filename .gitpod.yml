@@ -1,6 +1,6 @@
 tasks:
   - name: try
-    command: gp preview $(gp url 3306)index.php
+    command: gp open index.php
 image:
   file: .gitpod.Dockerfile
 ports:
