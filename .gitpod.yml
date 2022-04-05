@@ -1,11 +1,11 @@
-tasks:
-  - name: try
-    command: gp preview $(gp url 3306)index.php
 image:
   file: .gitpod.Dockerfile
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 3301
-    onOpen: open-browser
-vscode:
-  extensions:
-    - vscode.php-language-features
+  - port: 3306
+    onOpen: open-preview
