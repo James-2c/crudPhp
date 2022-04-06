@@ -3,8 +3,8 @@ image:
   
 tasks:
   - name: Start web server
-    init: python -m http.server 8000
+    init: python -m http.server 8080
 
 ports:
-  - port: 8000
+  - port: 8080
     onOpen: open-preview
