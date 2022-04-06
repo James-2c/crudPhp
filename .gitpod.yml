@@ -1,10 +1,10 @@
 image:
   file: .gitpod.Dockerfile
   
+vscode:
+  extensions:
+    - felixfbecker.php-debug
+
 ports:
   - port: 3306
     onOpen: open-preview
-
-tasks:
-  - init: composer update
-    command: php -S 0.0.0.0:3306 -t public/
