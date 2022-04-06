@@ -1,4 +1,1 @@
-FROM gitpod/workspace-full
-
-RUN sudo apt-get update && sudo apt-get install php-xdebug -y
-
+FROM gitpod/workspace-mysql-php:8.0:
