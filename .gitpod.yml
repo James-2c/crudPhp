@@ -3,7 +3,8 @@ image:
   
 tasks:
   - name: Start web server
-    init: python -m http.server 8000
+    #init: python -m http.server 8000
+    command: php -S 0.0.0.0:8000 -t public/
 
 ports:
   - port: 8000
@@ -12,3 +13,4 @@ ports:
 vscode:
   extensions:
     - felixfbecker.php-debug@1.13.0
+    - felixfbecker.php-debug
