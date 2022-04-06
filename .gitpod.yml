@@ -3,7 +3,9 @@ image:
 
 ports:
   - port: 8000
-    onOpen: open-preview
+    onOpen: ignore
+  - port: 34191
+    onOpen: ignore
 
 vscode:
   extensions:
