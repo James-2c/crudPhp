@@ -1,10 +1,10 @@
 image:
   file: .gitpod.Dockerfile
   
-vscode:
-  extensions:
-    - felixfbecker.php-debug
+tasks:
+  - name: Start web server
+    init: python -m http.server 8000
 
 ports:
-  - port: 3306
+  - port: 8000
     onOpen: open-preview
