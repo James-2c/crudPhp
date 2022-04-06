@@ -8,3 +8,7 @@ tasks:
 ports:
   - port: 8000
     onOpen: open-preview
+
+vscode:
+  extensions:
+    - felixfbecker.php-debug@1.13.0
