@@ -16,7 +16,7 @@ if(isset($_POST['update'])){
     $lname = $_POST['lname'];
     $sex = $_POST['sex'];
 
-    $sql = "UPDATE STUDENT SET Student_fname = '$fname', Student_init = '$init', Student_lname = '$lname', Student_sex = '$sex' WHERE Student_id = '$id'";
+    $sql = "UPDATE student SET Student_fname = '$fname', Student_init = '$init', Student_lname = '$lname', Student_sex = '$sex' WHERE Student_id = '$id'";
     $con->query($sql) or die ($con->error);
     echo header("Location: index.php");
 }
