@@ -11,7 +11,7 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM USER WHERE USERNAME = '$username' AND PASSWORD = '$password'";
+    $sql = "SELECT * FROM user WHERE USERNAME = '$username' AND PASSWORD = '$password'";
     $result = $con->query($sql) or die ($con->error);
     $users = $result->fetch_assoc();
     $total = $result->num_rows;

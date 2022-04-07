@@ -12,7 +12,7 @@ if(!isset($_SESSION['Username'])){
     echo header("Location: login.php");
 }
 
-$sql = "SELECT * FROM STUDENT";
+$sql = "SELECT * FROM student";
 $result = $con->query($sql) or die ($con->error);
 $row = $result->fetch_assoc();
 
