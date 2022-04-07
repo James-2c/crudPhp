@@ -13,4 +13,10 @@ vscode:
 
 tasks:
   - name: open browser
-    command: gp open index.php
+    command: gp open index.php |
+            mkdir -p gpinstall
+            echo exit | docker run -v $PWD/gpinstall:/workspace -u $(id -u) -i gcr.io/gitpod-io/self-hosted/installer:latest bash
+            mkdir -p ./db-init
+            cp gpinstall/gitpod/helm/gitpod/config/db/init/*.sql ./db-init/
+            rm -Rf gpinstall
+    
