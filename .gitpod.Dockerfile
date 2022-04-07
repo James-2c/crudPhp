@@ -1,4 +1,4 @@
 FROM gitpod/workspace-full
-FROM gitpod/workspacemysql
+FROM gitpod/workspace-mysql
 
 RUN sudo install-packages php-xdebug
