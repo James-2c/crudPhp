@@ -5,7 +5,7 @@ $con = connection();
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM STUDENT WHERE Student_id = '$id'";
+$sql = "DELETE FROM student WHERE Student_id = '$id'";
 $con->query($sql) or die ($con->error);
 echo header("Location: index.php");
 ?>

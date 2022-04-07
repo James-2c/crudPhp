@@ -5,7 +5,7 @@ $con = connection();
 
 $id = $_GET["id"];
 
-$sql = "SELECT * FROM STUDENT WHERE Student_id = '$id'";
+$sql = "SELECT * FROM student WHERE Student_id = '$id'";
 $result = $con->query($sql) or die ($con->error);
 $row = $result->fetch_assoc();
 

@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $lname = $_POST['lname'];
     $sex = $_POST['sex'];
 
-    $sql = "INSERT INTO STUDENT VALUES('$id', '$fname','$init','$lname','$sex')";
+    $sql = "INSERT INTO student VALUES('$id', '$fname','$init','$lname','$sex')";
     $con->query($sql) or die ($con->error);
 
     echo header("Location: index.php");

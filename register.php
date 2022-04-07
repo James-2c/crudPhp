@@ -9,7 +9,7 @@ if(isset($_POST['register'])){
     $password = $_POST['password'];
     $role = "user";
     
-    $sql = "INSERT INTO USER (USERNAME, PASSWORD, ROLE) VALUES('$username', '$password', '$role')";
+    $sql = "INSERT INTO user (USERNAME, PASSWORD, ROLE) VALUES('$username', '$password', '$role')";
     $con->query($sql) or die ($con->error);
     
     echo header("Location: login.php");
