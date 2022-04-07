@@ -2,16 +2,15 @@ image:
   file: .gitpod.Dockerfile
 
 ports:
-  - port: 8000
-    onOpen: ignore
-  - port: 34191
-    onOpen: ignore
-  - port: 9003
-    onOpen: ignore
+  - port: 8080
+    onOpen: open-browser
   - port: 3306
     onOpen: ignore
 
 vscode:
   extensions:
-    - felixfbecker.php-debug@1.13.0
     - felixfbecker.php-debug
+
+tasks:
+  - name: open browser
+    command: gp open index.php
